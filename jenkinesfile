@@ -1,14 +1,18 @@
 pipeline{
    agent any
    
+   tool{
+       maven 'maven'
+   }
+  
     stages{
-    stage('Build'){
-      
+    stage('Build maven'){
       steps{
+          
          checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/johnyshril/jenines.git']])
-        
+         
          
       }
     }
    }
-}
+ }
