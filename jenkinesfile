@@ -1,0 +1,12 @@
+pipeline{
+   angent any
+   tools{
+      maven 'maven'
+    }
+    stages{
+      stages{'Build maven'}
+      steps{
+         
+      }
+    }
+   }
