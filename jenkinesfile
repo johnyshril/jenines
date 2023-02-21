@@ -1,14 +1,15 @@
 pipeline{
-   angent any
+   agent any
    tools{
-      maven 'maven'
+      maven 'Maven'
     }
-    stages{
-      stages{'Build maven'}{
+    stages{'Build Maven'}{
+      
       steps{
          checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/johnyshril/jenines.git']])
          sh 'mvn clean install'
+         
       }
     }
-   }
+   
 }
