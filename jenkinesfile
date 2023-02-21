@@ -6,7 +6,8 @@ pipeline{
     stages{
       stages{'Build maven'}
       steps{
-         
+         git branch: 'main', credentialsId: 'github', url: 'https://github.com/johnyshril/jenines.git'
+         sh 'mvn clean install'
       }
     }
    }
