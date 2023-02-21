@@ -3,6 +3,7 @@ pipeline{
    tools{
       maven 'Maven'
     }
+    stages{
     stages{'Build Maven'}{
       
       steps{
@@ -11,5 +12,5 @@ pipeline{
          
       }
     }
-   
+   }
 }
