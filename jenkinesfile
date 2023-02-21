@@ -2,11 +2,11 @@ pipeline{
    agent any
    
     stages{
-    stages{'Build'}{
+    stage('Build'){
       
       steps{
          checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/johnyshril/jenines.git']])
-         sh 'mvn clean install'
+        
          
       }
     }
