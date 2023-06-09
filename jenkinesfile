@@ -9,7 +9,7 @@ pipeline{
     stage('Build maven'){
       steps{
           
-         checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/johnyshril/jenines.git']])
+         checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/johnyshril/jenines/edit/main/jenkinesfile']])
          
          
       }
