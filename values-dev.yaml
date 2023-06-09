@@ -1,0 +1,38 @@
+pc:
+  service:
+    version: "1.0"
+    imageRepo: pas/devbr-pc
+    releaseenv: devbr
+    appcontext: devbr-pc
+    replicas: 1
+    dbserver: usilg01-sqd116:1433
+    dbname: gw_pc_devbr
+    dbuser: svc_bts_d_sql_gps
+    jndiname: pcDataSource
+    mqhost: wmqiws10
+    mqchan: CLIENT.FROM.WAS
+    mqqmgr: BTSU01I
+    pmtinjndiname: pmtInDataSource 
+    pmtoutjndiname: pmtOutDataSource
+    pmtindbname: NoDB
+    pmtoutdbname: NoDB
+    designername: devbr-productdesigner
+    designerpath: /devbr-productdesigner
+    
+pcbatch:
+  service:
+    version: "1.0"
+    imageRepo: pas/devbr-pc
+    releaseenv: devbr
+    appcontext: devbr-pcbatch
+    replicas: 0
+    dbserver: usilg01-sqd116:1433
+    dbname: gw_pc_devbr
+
+ 
+
+   
+
+ 
+
+    
